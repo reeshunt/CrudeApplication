@@ -13,5 +13,9 @@ namespace CrudeApplicationDemo.Controllers
         {
             return View();
         }
+        public JsonResult AddEmployee()
+        {
+            return Json(new { msg = "success" }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
