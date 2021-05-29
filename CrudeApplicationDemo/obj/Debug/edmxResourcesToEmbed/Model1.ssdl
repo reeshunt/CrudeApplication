@@ -12,6 +12,7 @@ warning 6002: The table/view 'UspRough.dbo.Tbl_Emp' does not have a primary key 
     <Property Name="EmployeeName" Type="nvarchar" MaxLength="500" />
     <Property Name="Designation" Type="nvarchar" MaxLength="200" />
     <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="DateOfRetirement" Type="datetime" />
     <Property Name="ContactNumber" Type="nvarchar" MaxLength="10" />
     <Property Name="Address" Type="nvarchar(max)" />
     <Property Name="FileUpload" Type="nvarchar" MaxLength="1000" />
@@ -23,6 +24,7 @@ warning 6002: The table/view 'UspRough.dbo.Tbl_Emp' does not have a primary key 
     <Parameter Name="EmpId" Type="nvarchar" Mode="In" />
     <Parameter Name="Designation" Type="nvarchar" Mode="In" />
     <Parameter Name="DateOfBirth" Type="datetime" Mode="In" />
+    <Parameter Name="DateOfRetirement" Type="datetime" Mode="In" />
     <Parameter Name="ContactNumber" Type="nvarchar" Mode="In" />
     <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
     <Parameter Name="FileUpload" Type="nvarchar" Mode="In" />
@@ -37,6 +39,7 @@ warning 6002: The table/view 'UspRough.dbo.Tbl_Emp' does not have a primary key 
     [Tbl_Emp].[EmployeeName] AS [EmployeeName], 
     [Tbl_Emp].[Designation] AS [Designation], 
     [Tbl_Emp].[DateOfBirth] AS [DateOfBirth], 
+    [Tbl_Emp].[DateOfRetirement] AS [DateOfRetirement], 
     [Tbl_Emp].[ContactNumber] AS [ContactNumber], 
     [Tbl_Emp].[Address] AS [Address], 
     [Tbl_Emp].[FileUpload] AS [FileUpload], 

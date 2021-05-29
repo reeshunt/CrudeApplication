@@ -5,7 +5,7 @@
 
 <h2>Add Employee</h2>
 
-
+<form>
     <div class="form-group">
         <label for="empName">Employee Name</label>
         <input id="empName" type="text" class="form-control">
@@ -40,10 +40,11 @@
     </div>
 
     <button id="submitBtn" type="button" class="btn btn-primary">Submit</button>
-
+</form>
 
 <div id="snackbar"></div>
 <script>
+  
 
     $('#empfileUpload').change(function (e) {
         validateInput(this,'empfileUpload',5)
@@ -52,25 +53,35 @@
     $('#empPhotoUpload').change(function (e) {
         validateInputForImage(this,'empPhotoUpload',1)
     });
+    function clearForm() {
+        $('form').find("input[type=text] ").val("");
+        $('form').find("input[type=textarea] ").val("");
+        $('form').find("input[type=date] ").val("");
+        $('form').find("input[type=file] ").val("");
+    }
     $('#submitBtn').click(function () {
         var dataObj = new Object();
-        dataObj.empName = $('#empName').val();
-        dataObj.empDesignation = $('#empDesignation').val();
-        dataObj.empDOB = $('#empDOB').val();
-        dataObj.empDOR = $('#empDOR').val();
-        dataObj.empContactNumber = $('#empContactNumber').val();
-        dataObj.empAddress = $('#empAddress').val();
-        dataObj.empfileUpload = $('#empfileUpload').val();
-        dataObj.empPhotoUpload = $('#empPhotoUpload').val();
+        dataObj.EmployeeName = $('#empName').val();
+        dataObj.Designation = $('#empDesignation').val();
+        dataObj.DateOfBirth = $('#empDOB').val();
+        dataObj.DateOfRetirement = $('#empDOR').val();
+        dataObj.ContactNumber = $('#empContactNumber').val();
+        dataObj.Address = $('#empAddress').val();
+        dataObj.FileUpload =  $('#empfileUpload').val().split('\\')[2]
+        dataObj.PhotoUpload = $('#empPhotoUpload').val().split('\\')[2]
         //make an employee details object and pass in ajax to the controller
         $.ajax({
             url: '@Url.Action("AddEmployee","Employee")',
             data: dataObj,
             success: function (data) {
-
+                debugger;
+                if (data.msg == "success") {
+                    toast("Added Successfully");
+                    clearForm()
+                }
             },
             error: function (data) {
-
+                toast(data.errorMsg);
             }
         })
     })

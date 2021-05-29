@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="UspRoughModelStoreContainer" CdmEntityContainer="UspRoughEntities">
+  <EntityContainerMapping StorageEntityContainer="UspRoughModelStoreContainer" CdmEntityContainer="UspRoughEntities1">
     <EntitySetMapping Name="Tbl_Emp">
       <EntityTypeMapping TypeName="UspRoughModel.Tbl_Emp">
         <MappingFragment StoreEntitySet="Tbl_Emp">
@@ -9,6 +9,7 @@
           <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Designation" ColumnName="Designation" />
           <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="DateOfRetirement" ColumnName="DateOfRetirement" />
           <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="FileUpload" ColumnName="FileUpload" />
@@ -26,6 +27,7 @@
           <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Designation" ColumnName="Designation" />
           <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="DateOfRetirement" ColumnName="DateOfRetirement" />
           <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="FileUpload" ColumnName="FileUpload" />

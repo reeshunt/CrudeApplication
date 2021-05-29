@@ -10,19 +10,21 @@
     <Property Name="EmployeeName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="Designation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="DateOfRetirement" Type="DateTime" Precision="3" />
     <Property Name="ContactNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="FileUpload" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="PhotoUpload" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
-  <EntityContainer Name="UspRoughEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="UspRoughEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Tbl_Emp" EntityType="Self.Tbl_Emp" />
     <FunctionImport Name="Usp_Emp">
       <Parameter Name="EmployeeName" Mode="In" Type="String" />
       <Parameter Name="EmpId" Mode="In" Type="String" />
       <Parameter Name="Designation" Mode="In" Type="String" />
       <Parameter Name="DateOfBirth" Mode="In" Type="DateTime" />
+      <Parameter Name="DateOfRetirement" Mode="In" Type="DateTime" />
       <Parameter Name="ContactNumber" Mode="In" Type="String" />
       <Parameter Name="Address" Mode="In" Type="String" />
       <Parameter Name="FileUpload" Mode="In" Type="String" />
@@ -36,6 +38,7 @@
     <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="500" />
     <Property Type="String" Name="Designation" Nullable="true" MaxLength="200" />
     <Property Type="DateTime" Name="DateOfBirth" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateOfRetirement" Nullable="true" Precision="23" />
     <Property Type="String" Name="ContactNumber" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="Address" Nullable="true" />
     <Property Type="String" Name="FileUpload" Nullable="true" MaxLength="1000" />
