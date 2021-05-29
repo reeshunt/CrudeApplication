@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "EmpDetails";
+}
+
+<h2>EmpDetails</h2>
+
+<div>
+    <table id="t01">
+        <thead>
+            <tr>
+                <th>EMP. ID</th>
+                <th>Employee Name</th>
+                <th>Designation</th>
+                <th>Date of Birth</th>
+                <th>Date of Retirement</th>
+                <th>Contact Number</th>
+                <th>Address</th>
+                <th>File Upload</th>
+                <th>Photo Upload</th>
+            </tr>
+        </thead>
+        @foreach (var item in ViewBag.userdetails)
+        {
+
+    <tr>
+        <td>
+            @item.EmpId
+        </td>
+        <td>
+            @item.EmployeeName
+        </td>
+        <td>
+            @item.Designation
+        </td>
+        <td>
+            @item.DateOfBirth
+        </td>
+        <td>
+            @item.DateOfRetirement
+        </td>
+        <td>
+            @item.ContactNumber
+        </td>
+        <td>
+            @item.Address
+        </td>
+        <td>
+            @item.FileUpload
+        </td>
+        <td>
+            @item.PhotoUpload
+        </td>
+    </tr>
+
+        }
+
+    </table>
+</div>
+<style>
+    table#t01 {
+        width: 100%;
+        background-color: #f1f1c1;
+    }
+
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        table#t01 th {
+            color: white;
+            background-color: blue;
+        }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+</style>

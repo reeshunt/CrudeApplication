@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UspRoughModelStoreContainer" CdmEntityContainer="UspRoughEntities">
+    <EntitySetMapping Name="Tbl_Emp">
+      <EntityTypeMapping TypeName="UspRoughModel.Tbl_Emp">
+        <MappingFragment StoreEntitySet="Tbl_Emp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FileUpload" ColumnName="FileUpload" />
+          <ScalarProperty Name="PhotoUpload" ColumnName="PhotoUpload" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Usp_Emp" FunctionName="UspRoughModel.Store.Usp_Emp" />
+    <FunctionImportMapping FunctionImportName="Usp_EmpList" FunctionName="UspRoughModel.Store.Usp_EmpList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UspRoughModel.Usp_EmpList_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FileUpload" ColumnName="FileUpload" />
+          <ScalarProperty Name="PhotoUpload" ColumnName="PhotoUpload" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

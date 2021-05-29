@@ -13,5 +13,13 @@ namespace CrudeApplicationDemo.Controllers
         {
             return View();
         }
+        
+        public ActionResult EmpDetails()
+        {
+            UspRoughEntities1 r = new UspRoughEntities1();
+            var data = r.Usp_EmpList().ToList();
+            ViewBag.userdetails = data;
+            return View();
+        }
     }
 }

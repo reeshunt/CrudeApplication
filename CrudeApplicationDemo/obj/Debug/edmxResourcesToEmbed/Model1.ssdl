@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UspRoughModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'UspRough.dbo.Tbl_Emp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_Emp">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CreatedDate" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpId" Type="nvarchar" MaxLength="500" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="200" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="ContactNumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="FileUpload" Type="nvarchar" MaxLength="1000" />
+    <Property Name="PhotoUpload" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Function Name="Usp_Emp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmployeeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmpId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Designation" Type="nvarchar" Mode="In" />
+    <Parameter Name="DateOfBirth" Type="datetime" Mode="In" />
+    <Parameter Name="ContactNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FileUpload" Type="nvarchar" Mode="In" />
+    <Parameter Name="PhotoUpload" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_EmpList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="UspRoughModelStoreContainer">
+    <EntitySet Name="Tbl_Emp" EntityType="Self.Tbl_Emp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_Emp].[Id] AS [Id], 
+    [Tbl_Emp].[EmpId] AS [EmpId], 
+    [Tbl_Emp].[EmployeeName] AS [EmployeeName], 
+    [Tbl_Emp].[Designation] AS [Designation], 
+    [Tbl_Emp].[DateOfBirth] AS [DateOfBirth], 
+    [Tbl_Emp].[ContactNumber] AS [ContactNumber], 
+    [Tbl_Emp].[Address] AS [Address], 
+    [Tbl_Emp].[FileUpload] AS [FileUpload], 
+    [Tbl_Emp].[PhotoUpload] AS [PhotoUpload], 
+    [Tbl_Emp].[CreatedDate] AS [CreatedDate]
+    FROM [dbo].[Tbl_Emp] AS [Tbl_Emp]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
