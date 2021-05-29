@@ -54,6 +54,7 @@
 
     $('#empfileUpload').change(function () {
         var ext = this.value.match(/\.(.+)$/)[1];
+        alert(this.files[0].size/1024);
         switch (ext) {
             case 'pdf':
                 $('#submitBtn').attr('disabled', false);
